@@ -20,30 +20,27 @@ class MainVC: UIViewController {
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tabsView: UIView!
+    @IBOutlet weak var resultsView: UIView!
     
     private let viewModel = SearchViewModel()
     private var tabsCollection: TabsCollection!
+    private var resultsTable: ResultsTable!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         title = "Plate360"
         
-        searchField.delegate = self
-        searchField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
-        
-        tabsCollection = TabsCollection()
-        tabsCollection?.translatesAutoresizingMaskIntoConstraints = false
-        tabsCollection?.configure(with: ResultsTabs.allCases.map { $0.rawValue })
-        tabsView.addSubview(tabsCollection)
-        
-        NSLayoutConstraint.activate([
-            tabsCollection.topAnchor.constraint(equalTo: tabsView.topAnchor),
-            tabsCollection.leadingAnchor.constraint(equalTo: tabsView.leadingAnchor),
-            tabsCollection.trailingAnchor.constraint(equalTo: tabsView.trailingAnchor),
-            tabsCollection.bottomAnchor.constraint(equalTo: tabsView.bottomAnchor)
-        ])
-        
+        loadData()
+        setSearchField()
+        setTabCollection()
+        setResultsTable()
+
+        let currentTab = ResultsTabs.technical.rawValue
+        resultsTable.configure(with: (1...3).map { "\(currentTab) \($0)" })
+    }
+    
+    fileprivate func loadData() {
         viewModel.onDataUpdated = { [weak self] in
             guard let self = self else { return }
             
@@ -55,6 +52,38 @@ class MainVC: UIViewController {
         viewModel.onError = { error in
             print("error: \(error)")
         }
+    }
+    
+    fileprivate func setSearchField() {
+        searchField.delegate = self
+        searchField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
+    }
+    
+    private func setTabCollection() {
+        tabsCollection = TabsCollection()
+        tabsCollection?.translatesAutoresizingMaskIntoConstraints = false
+        tabsCollection?.configure(with: ResultsTabs.allCases.map { $0.rawValue })
+        tabsView.addSubview(tabsCollection)
+        
+        NSLayoutConstraint.activate([
+            tabsCollection.topAnchor.constraint(equalTo: tabsView.topAnchor),
+            tabsCollection.leadingAnchor.constraint(equalTo: tabsView.leadingAnchor),
+            tabsCollection.trailingAnchor.constraint(equalTo: tabsView.trailingAnchor),
+            tabsCollection.bottomAnchor.constraint(equalTo: tabsView.bottomAnchor)
+        ])
+    }
+    
+    private func setResultsTable() {
+        resultsTable = ResultsTable()
+        resultsTable.translatesAutoresizingMaskIntoConstraints = false
+        resultsView.addSubview(resultsTable)
+        
+        NSLayoutConstraint.activate([
+            resultsTable.topAnchor.constraint(equalTo: resultsView.topAnchor),
+            resultsTable.leadingAnchor.constraint(equalTo: resultsView.leadingAnchor),
+            resultsTable.trailingAnchor.constraint(equalTo: resultsView.trailingAnchor),
+            resultsTable.bottomAnchor.constraint(equalTo: resultsView.bottomAnchor)
+        ])
     }
 
     @IBAction func onTapSearch(_ sender: UIButton) {

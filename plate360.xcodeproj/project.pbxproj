@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9878B5E02EB200790036BDC1 /* Exceptions for "plate360" folder in "plate360" target */ = {
+		9878B6812EB6389D0036BDC1 /* Exceptions for "plate360" folder in "plate360" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -24,7 +24,7 @@
 		9878B5CD2EB200770036BDC1 /* plate360 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9878B5E02EB200790036BDC1 /* Exceptions for "plate360" folder in "plate360" target */,
+				9878B6812EB6389D0036BDC1 /* Exceptions for "plate360" folder in "plate360" target */,
 			);
 			path = plate360;
 			sourceTree = "<group>";
