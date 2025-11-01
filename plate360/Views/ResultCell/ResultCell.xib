@@ -23,17 +23,17 @@
                             <constraint firstAttribute="width" constant="24" id="iS1-AC-2GC"/>
                         </constraints>
                     </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Au2-sj-RBv">
-                        <rect key="frame" x="37" y="0.0" width="283" height="49"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Au2-sj-RBv">
+                        <rect key="frame" x="37" y="0.0" width="275" height="49"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-Se-vjd">
-                                <rect key="frame" x="0.0" y="0.0" width="29" height="24.666666666666668"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="10"/>
+                                <rect key="frame" x="0.0" y="15.333333333333334" width="34.333333333333336" height="18.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-0t-AZM">
-                                <rect key="frame" x="0.0" y="24.666666666666671" width="34.333333333333336" height="24.333333333333329"/>
+                                <rect key="frame" x="240.66666666666671" y="15.333333333333334" width="34.333333333333343" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -55,7 +55,7 @@
                     <constraint firstItem="QeY-2b-bsD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HGH-jU-RuK"/>
                     <constraint firstItem="FtE-KE-Ppe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KJk-m2-6Cq"/>
                     <constraint firstAttribute="bottom" secondItem="FtE-KE-Ppe" secondAttribute="bottom" id="LQ6-mC-oyl"/>
-                    <constraint firstAttribute="trailing" secondItem="Au2-sj-RBv" secondAttribute="trailing" id="kL9-NG-1G3"/>
+                    <constraint firstAttribute="trailing" secondItem="Au2-sj-RBv" secondAttribute="trailing" constant="8" id="kL9-NG-1G3"/>
                     <constraint firstAttribute="trailing" secondItem="FtE-KE-Ppe" secondAttribute="trailing" id="rni-C2-JeL"/>
                     <constraint firstAttribute="bottom" secondItem="Au2-sj-RBv" secondAttribute="bottom" constant="1" id="xI6-x1-Sr4"/>
                 </constraints>

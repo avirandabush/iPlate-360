@@ -15,6 +15,7 @@ class ResultsTable: UIView {
         let view = UITableView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.register(UINib(nibName: "ResultCell", bundle: nil), forCellReuseIdentifier: "ResultCell")
+        view.backgroundColor = .clear
         view.dataSource = self
         view.delegate = self
         view.separatorStyle = .none
@@ -55,7 +56,7 @@ extension ResultsTable: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
-        cell.valueLabel.text = items[indexPath.row]
+        cell.configure(title: "the title", value: "value: \(indexPath.row)")
         return cell
     }
     
