@@ -15,19 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_launcher-playstore" translatesAutoresizingMaskIntoConstraints="NO" id="yBe-t9-eBu">
-                                <rect key="frame" x="46.666666666666657" y="276" width="300" height="300"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-circle" translatesAutoresizingMaskIntoConstraints="NO" id="Y7M-s3-quK">
+                                <rect key="frame" x="36.666666666666657" y="266" width="320" height="320"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="I55-VM-43E"/>
-                                    <constraint firstAttribute="height" constant="300" id="z6N-gY-VhW"/>
+                                    <constraint firstAttribute="height" constant="320" id="n0J-qM-0w2"/>
+                                    <constraint firstAttribute="width" constant="320" id="qAd-eJ-Lzn"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" red="0.64629414265706286" green="0.64669680372148863" blue="0.64734675120048024" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="yBe-t9-eBu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="NzY-DS-fg0"/>
-                            <constraint firstItem="yBe-t9-eBu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jHQ-M4-KI2"/>
+                            <constraint firstItem="Y7M-s3-quK" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="86z-nI-asZ"/>
+                            <constraint firstItem="Y7M-s3-quK" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="xH3-Kd-QNI"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -37,6 +37,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ic_launcher-playstore" width="512" height="512"/>
+        <image name="logo-circle" width="1000" height="1000"/>
     </resources>
 </document>
