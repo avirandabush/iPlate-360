@@ -9,7 +9,7 @@ import UIKit
 
 class ResultsTable: UIView {
 
-    private var items: [String] = []
+    private var items: [DisplayItem] = []
     
     private lazy var tableView: UITableView = {
         let view = UITableView()
@@ -42,7 +42,7 @@ class ResultsTable: UIView {
         ])
     }
     
-    func configure(with items: [String]) {
+    func configure(with items: [DisplayItem]) {
         self.items = items
         tableView.reloadData()
     }
@@ -56,7 +56,8 @@ extension ResultsTable: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ResultCell", for: indexPath) as! ResultCell
-        cell.configure(title: "the title", value: "value: \(indexPath.row)")
+        cell.configure(item: items[indexPath.row])
+        cell.selectionStyle = .none
         return cell
     }
     

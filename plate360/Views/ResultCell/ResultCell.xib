@@ -16,24 +16,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_launcher-playstore" translatesAutoresizingMaskIntoConstraints="NO" id="QeY-2b-bsD">
-                        <rect key="frame" x="5" y="13" width="24" height="24"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="24" id="PbL-72-nsf"/>
-                            <constraint firstAttribute="width" constant="24" id="iS1-AC-2GC"/>
-                        </constraints>
-                    </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Au2-sj-RBv">
-                        <rect key="frame" x="37" y="0.0" width="275" height="49"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Au2-sj-RBv">
+                        <rect key="frame" x="12" y="0.0" width="296" height="49"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-Se-vjd">
-                                <rect key="frame" x="0.0" y="15.333333333333334" width="34.333333333333336" height="18.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-Se-vjd">
+                                <rect key="frame" x="270.33333333333331" y="15.333333333333334" width="25.666666666666686" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-0t-AZM">
-                                <rect key="frame" x="240.66666666666671" y="15.333333333333334" width="34.333333333333343" height="18.333333333333329"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-0t-AZM">
+                                <rect key="frame" x="0.0" y="15.333333333333334" width="36" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -49,13 +42,11 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="QeY-2b-bsD" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="9eu-8P-dRa"/>
                     <constraint firstItem="Au2-sj-RBv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FpB-Y8-1Dc"/>
-                    <constraint firstItem="Au2-sj-RBv" firstAttribute="leading" secondItem="QeY-2b-bsD" secondAttribute="trailing" constant="8" id="FyS-yT-70L"/>
-                    <constraint firstItem="QeY-2b-bsD" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="HGH-jU-RuK"/>
                     <constraint firstItem="FtE-KE-Ppe" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="KJk-m2-6Cq"/>
                     <constraint firstAttribute="bottom" secondItem="FtE-KE-Ppe" secondAttribute="bottom" id="LQ6-mC-oyl"/>
-                    <constraint firstAttribute="trailing" secondItem="Au2-sj-RBv" secondAttribute="trailing" constant="8" id="kL9-NG-1G3"/>
+                    <constraint firstItem="Au2-sj-RBv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="NFg-TG-7oX"/>
+                    <constraint firstAttribute="trailing" secondItem="Au2-sj-RBv" secondAttribute="trailing" constant="12" id="kL9-NG-1G3"/>
                     <constraint firstAttribute="trailing" secondItem="FtE-KE-Ppe" secondAttribute="trailing" id="rni-C2-JeL"/>
                     <constraint firstAttribute="bottom" secondItem="Au2-sj-RBv" secondAttribute="bottom" constant="1" id="xI6-x1-Sr4"/>
                 </constraints>
@@ -63,14 +54,10 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
-                <outlet property="iconImage" destination="QeY-2b-bsD" id="3l5-Ez-Rk0"/>
                 <outlet property="titleLabel" destination="d1e-Se-vjd" id="C0Y-AR-yHG"/>
                 <outlet property="valueLabel" destination="QRY-0t-AZM" id="Bcj-qC-xD5"/>
             </connections>
             <point key="canvasLocation" x="-96" y="21"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="ic_launcher-playstore" width="512" height="512"/>
-    </resources>
 </document>

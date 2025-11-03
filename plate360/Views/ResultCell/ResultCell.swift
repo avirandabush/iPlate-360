@@ -9,7 +9,6 @@ import UIKit
 
 class ResultCell: UITableViewCell {
 
-    @IBOutlet weak var iconImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
@@ -17,8 +16,8 @@ class ResultCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func configure(title: String, value: String) {
-        self.titleLabel.text = title
-        self.valueLabel.text = value
+    func configure(item: DisplayItem) {
+        self.titleLabel.text = item.title
+        self.valueLabel.text = item.value
     }
 }
