@@ -10,7 +10,7 @@ import Foundation
 class TabBuilder {
     
     private func makeItem(_ title: String, _ value: String?) -> DisplayItem {
-        let safeValue = value?.isEmpty == false ? value! : "אין נתונים"
+        let safeValue = value?.isEmpty == false ? value! : LanguageManager.shared.isHebrew ? "אין נתונים" : "No data"
         return DisplayItem(title: title, value: safeValue)
     }
 
