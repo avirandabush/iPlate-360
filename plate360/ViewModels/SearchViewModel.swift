@@ -11,11 +11,13 @@ final class SearchViewModel {
     private let vehicleDetailsRepository = VehicleDetailsRepository()
     private let publicVehicleRepository = PublicVehicleRepository()
     private let vehicleHistoryRepository = VehicleHistoryRepository()
+    private let disabledParkingPermitRepository = DisabledParkingPermitRepository()
     private let tabBuilder = TabBuilder()
     
     var vehicleDetails: [VehicleDetails] = []
     var publicVehicle: [PublicVehicle] = []
     var vehicleHistory: [VehicleHistory] = []
+    var disabledParkingPermit: [DisabledParkingPermit] = []
     
     var onDataUpdated: (() -> Void)?
     var onError: ((String) -> Void)?
@@ -56,6 +58,17 @@ final class SearchViewModel {
             dispatchGroup.leave()
         }
         
+        dispatchGroup.enter()
+        disabledParkingPermitRepository.fetchDisabledParkingPermit(by: number) { [weak self] result in
+            switch result {
+            case .success(let permit):
+                self?.disabledParkingPermit = permit
+            case .failure(let error):
+                self?.onError?("History error: \(error)")
+            }
+            dispatchGroup.leave()
+        }
+        
         dispatchGroup.notify(queue: .main) { [weak self] in
             self?.onDataUpdated?()
         }
@@ -70,9 +83,7 @@ final class SearchViewModel {
         case .safety:
             return tabBuilder.safetyTabBuilder(vehicleDetails: vehicleDetails, vehicleHistory: vehicleHistory)
         case .miscellaneous:
-            return tabBuilder.miscellaneousTabBuilder(vehicleDetails: vehicleDetails, vehicleHistory: vehicleHistory)
-        case .history:
-            return tabBuilder.historyTabBuilder(vehicleDetails: vehicleDetails, vehicleHistory: vehicleHistory)
+            return tabBuilder.miscellaneousTabBuilder(disabledParkingPermit: disabledParkingPermit)
         }
     }
 }

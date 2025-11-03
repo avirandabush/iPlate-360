@@ -12,7 +12,6 @@ enum ResultsTabs: String, CaseIterable {
     case licensing
     case safety
     case miscellaneous
-    case history
     
     var title: String {
         let isHebrew = LanguageManager.shared.isHebrew
@@ -26,8 +25,6 @@ enum ResultsTabs: String, CaseIterable {
             return isHebrew ? "בטיחות" : "Safety"
         case .miscellaneous:
             return isHebrew ? "שונות" : "Miscellaneous"
-        case .history:
-            return isHebrew ? "היסטוריה" : "History"
         }
     }
 }

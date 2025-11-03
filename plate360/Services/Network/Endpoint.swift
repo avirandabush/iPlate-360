@@ -24,4 +24,9 @@ struct Endpoint {
         let urlString = "\(baseURL)datastore_search?resource_id=56063a99-8a3e-4ff4-912e-5966c0279bad&q=\(number)"
         return URL(string: urlString)
     }
+    
+    static func disabledParkingPermit(number: String) -> URL? {
+        let urlString = "\(baseURL)datastore_search?resource_id=c8b9f9c8-4612-4068-934f-d4acd2e3c06e&q=\(number)"
+        return URL(string: urlString)
+    }
 }

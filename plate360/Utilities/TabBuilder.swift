@@ -85,28 +85,15 @@ class TabBuilder {
         return items
     }
     
-    func miscellaneousTabBuilder(vehicleDetails: [VehicleDetails], vehicleHistory: [VehicleHistory]) -> [DisplayItem] {
+    func miscellaneousTabBuilder(disabledParkingPermit: [DisabledParkingPermit]) -> [DisplayItem] {
         var items: [DisplayItem] = []
         
-        if let details = vehicleDetails.first {
-            
-        }
-        
-        if let history = vehicleHistory.first {
-            
-        }
-        
-        return items
-    }
-    
-    func historyTabBuilder(vehicleDetails: [VehicleDetails], vehicleHistory: [VehicleHistory]) -> [DisplayItem] {
-        var items: [DisplayItem] = []
-        
-        if let details = vehicleDetails.first {
-        }
-        
-        if let history = vehicleHistory.first {
-            
+        if let permit = disabledParkingPermit.first {
+            items.append(makeItem(DisabledParkingPermit.Field.badgeTitle.hebrewTitle, DisabledParkingPermit.Field.yesBadge.hebrewTitle))
+            items.append(makeItem(DisabledParkingPermit.Field.badgeCreationDate.hebrewTitle, "\(permit.badgeCreationDate ?? 0)"))
+            items.append(makeItem(DisabledParkingPermit.Field.badgeType.hebrewTitle, "\(permit.badgeType ?? 0)"))
+        } else {
+            items.append(makeItem(DisabledParkingPermit.Field.badgeTitle.hebrewTitle, DisabledParkingPermit.Field.noBadge.hebrewTitle))
         }
         
         return items
