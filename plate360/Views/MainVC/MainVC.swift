@@ -8,11 +8,28 @@
 import UIKit
 
 enum ResultsTabs: String, CaseIterable {
-    case technical = "Technical"
-    case licensing = "Licensing"
-    case safety = "Safety"
-    case miscellaneous = "Miscellaneous"
-    case history = "History"
+    case technical
+    case licensing
+    case safety
+    case miscellaneous
+    case history
+    
+    var title: String {
+        let isHebrew = LanguageManager.shared.isHebrew
+        
+        switch self {
+        case .technical:
+            return isHebrew ? "טכני" : "Technical"
+        case .licensing:
+            return isHebrew ? "רישוי" : "Licensing"
+        case .safety:
+            return isHebrew ? "בטיחות" : "Safety"
+        case .miscellaneous:
+            return isHebrew ? "שונות" : "Miscellaneous"
+        case .history:
+            return isHebrew ? "היסטוריה" : "History"
+        }
+    }
 }
 
 class MainVC: UIViewController {
@@ -59,7 +76,7 @@ class MainVC: UIViewController {
     private func setTabCollection() {
         tabsCollection = TabsCollection()
         tabsCollection?.translatesAutoresizingMaskIntoConstraints = false
-        tabsCollection?.configure(with: ResultsTabs.allCases.map { $0.rawValue })
+        tabsCollection?.configure(with: ResultsTabs.allCases.map { $0.title })
         tabsView.addSubview(tabsCollection)
         
         tabsCollection.onTabSelected = { [weak self] index in
