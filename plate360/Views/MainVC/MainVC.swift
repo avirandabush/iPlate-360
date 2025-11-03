@@ -25,6 +25,7 @@ class MainVC: UIViewController {
     private let viewModel = SearchViewModel()
     private var tabsCollection: TabsCollection!
     private var resultsTable: ResultsTable!
+    private var currentTab: ResultsTabs = .technical
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,18 +36,14 @@ class MainVC: UIViewController {
         setSearchField()
         setTabCollection()
         setResultsTable()
-
-        let currentTab = ResultsTabs.technical.rawValue
-        resultsTable.configure(with: (1...3).map { "\(currentTab) \($0)" })
     }
     
-    fileprivate func loadData() {
+    private func loadData() {
         viewModel.onDataUpdated = { [weak self] in
             guard let self = self else { return }
             
-            print(self.viewModel.vehicles.count)
-            print(self.viewModel.vehicles.map{ $0.tradeName })
-            print(self.viewModel.vehicles)
+            let items = viewModel.displayItems(for: currentTab)
+            self.resultsTable.configure(with: items)
         }
         
         viewModel.onError = { error in
@@ -54,7 +51,7 @@ class MainVC: UIViewController {
         }
     }
     
-    fileprivate func setSearchField() {
+    private func setSearchField() {
         searchField.delegate = self
         searchField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
     }
@@ -64,6 +61,14 @@ class MainVC: UIViewController {
         tabsCollection?.translatesAutoresizingMaskIntoConstraints = false
         tabsCollection?.configure(with: ResultsTabs.allCases.map { $0.rawValue })
         tabsView.addSubview(tabsCollection)
+        
+        tabsCollection.onTabSelected = { [weak self] index in
+            if let self = self {
+                currentTab = ResultsTabs.allCases[index]
+                let items = viewModel.displayItems(for: currentTab)
+                self.resultsTable.configure(with: items)
+            }
+        }
         
         NSLayoutConstraint.activate([
             tabsCollection.topAnchor.constraint(equalTo: tabsView.topAnchor),

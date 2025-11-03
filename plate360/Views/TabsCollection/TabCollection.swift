@@ -9,6 +9,8 @@ import UIKit
 
 class TabsCollection: UIView {
     
+    var onTabSelected: ((Int) -> Void)?
+    
     private var items: [String] = []
     private var selectedIndex: Int = 0
     
@@ -72,6 +74,7 @@ extension TabsCollection: UICollectionViewDataSource, UICollectionViewDelegateFl
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
+        onTabSelected?(selectedIndex)
         collectionView.reloadData()
     }
 }
