@@ -15,12 +15,13 @@ class TabsCollection: UIView {
     private var selectedIndex: Int = 0
     
     private lazy var collectionView: UICollectionView = {
-        let layout = UICollectionViewFlowLayout()
+        let layout = RTLCollectionFlowLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 1
         layout.minimumInteritemSpacing = 1
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        view.semanticContentAttribute = LanguageManager.shared.isHebrew ? .forceRightToLeft : .forceLeftToRight
         view.register(UINib(nibName: "TabCell", bundle: nil), forCellWithReuseIdentifier: "TabCell")
         view.backgroundColor = .clear
         view.showsHorizontalScrollIndicator = false
