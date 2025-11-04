@@ -85,7 +85,9 @@ class TabBuilder {
         return items
     }
     
-    func miscellaneousTabBuilder(disabledParkingPermit: [DisabledParkingPermit]) -> [DisplayItem] {
+    func miscellaneousTabBuilder(disabledParkingPermit: [DisabledParkingPermit], carExists: Bool) -> [DisplayItem] {
+        guard carExsist == true else { return [] }
+        
         var items: [DisplayItem] = []
         
         if let permit = disabledParkingPermit.first {

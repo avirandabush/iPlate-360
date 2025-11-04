@@ -83,7 +83,7 @@ final class SearchViewModel {
         case .safety:
             return tabBuilder.safetyTabBuilder(vehicleDetails: vehicleDetails, vehicleHistory: vehicleHistory)
         case .miscellaneous:
-            return tabBuilder.miscellaneousTabBuilder(disabledParkingPermit: disabledParkingPermit)
+            return tabBuilder.miscellaneousTabBuilder(disabledParkingPermit: disabledParkingPermit, carExists: !vehicleDetails.isEmpty)
         }
     }
 }
