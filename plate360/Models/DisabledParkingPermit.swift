@@ -27,37 +27,13 @@ struct DisabledParkingPermit: Codable {
         case badgeCreationDate = "TAARICH HAFAKAT TAG"
         case badgeType = "SUG TAV"
     }
-}
-
-extension DisabledParkingPermit {
+    
     enum Field: String, CaseIterable {
-        case carNumber
-        case badgeCreationDate
-        case badgeType
-        case noBadge
-        case yesBadge
-        case badgeTitle
-
-        var hebrewTitle: String {
-            switch self {
-            case .carNumber: return "מספר רכב"
-            case .badgeCreationDate: return "תאריך הפקה"
-            case .badgeType: return "סוג תו"
-            case .noBadge: return "אין תו"
-            case .yesBadge: return "יש תו"
-            case .badgeTitle: return "תו נכה"
-            }
-        }
-
-        var englishTitle: String {
-            switch self {
-            case .carNumber: return "License Number"
-            case .badgeCreationDate: return "Permiy Production Date"
-            case .badgeType: return "Permit Type"
-            case .noBadge: return "No Badge"
-            case .yesBadge: return "Badge Exists"
-            case .badgeTitle: return "No Badge"
-            }
-        }
+        case carNumber = "disable.parking.permit.field.carNumber"
+        case badgeCreationDate = "disable.parking.permit.field.badgeCreationDate"
+        case badgeType = "disable.parking.permit.field.badgeType"
+        case noBadge = "disable.parking.permit.field.noBadge"
+        case yesBadge = "disable.parking.permit.field.yesBadge"
+        case badgeTitle = "disable.parking.permit.field.badgeTitle"
     }
 }

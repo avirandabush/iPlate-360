@@ -101,7 +101,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKD-Qo-mQ5" userLabel="ResultsSectionView">
                                 <rect key="frame" x="0.0" y="359" width="393" height="459"/>
                                 <subviews>
-                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHB-qj-rQC" userLabel="TabsView">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tHB-qj-rQC" userLabel="TabsView">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -138,6 +138,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="appDescription" destination="AXb-sl-EK2" id="nBv-UV-U3i"/>
+                        <outlet property="appTitle" destination="wv6-Zn-W66" id="37w-xY-zr9"/>
                         <outlet property="resultsView" destination="xc9-Bc-nAj" id="cUa-88-LCP"/>
                         <outlet property="searchButton" destination="mht-es-cbd" id="zVh-ir-Oar"/>
                         <outlet property="searchField" destination="Z0z-hd-Yhm" id="hm1-LU-BIi"/>

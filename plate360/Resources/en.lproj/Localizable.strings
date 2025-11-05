@@ -1,0 +1,75 @@
+
+"results.tabs.title.technical" = "Technical";
+"results.tabs.title.licensing" = "Licensing";
+"results.tabs.title.safety" = "Safety";
+"results.tabs.title.miscellaneous" = "Miscellaneous";
+
+"results.tabs.noData.technical" = "No technical information";
+"results.tabs.noData.licensing" = "No licensing information";
+"results.tabs.noData.safety" = "No safety information";
+"results.tabs.noData.miscellaneous" = "No additional information";
+
+"main.screen.title" = "Plate360";
+"main.search.placeholder" = "Enter car number";
+"main.screen.search.button.title" = "SEARCH";
+"main.screen.description" = "Get all car details by typing plate number.";
+
+"empty.view.message.default" = "Search a Plate Number!";
+
+"tab.builder.makeItem.noData" = "No Data.";
+
+"vehicle.history.field.licenseNumber" = "License Number";
+"vehicle.history.field.engineNumber" = "Engine Number";
+"vehicle.history.field.lastMileage" = "Last Mileage";
+"vehicle.history.field.structureChangeFlag" = "Structure Change";
+"vehicle.history.field.lpgInspectionFlag" = "LPG Inspection";
+"vehicle.history.field.colorChangeFlag" = "Color Change";
+"vehicle.history.field.tireChangeFlag" = "Tire Change";
+"vehicle.history.field.firstRegistrationDate" = "First Registration";
+"vehicle.history.field.originalityName" = "Originality";
+
+"vehicle.details.field.carNumber" = "License Number";
+"vehicle.details.field.manufacturerCode" = "Manufacturer Code";
+"vehicle.details.field.manufacturerName" = "Manufacturer";
+"vehicle.details.field.modelType" = "Model Type";
+"vehicle.details.field.modelCode" = "Model Code";
+"vehicle.details.field.modelName" = "Model Name";
+"vehicle.details.field.trimLevel" = "Trim Level";
+"vehicle.details.field.safetyLevel" = "Safety Equipment Level";
+"vehicle.details.field.emissionGroup" = "Emission Group";
+"vehicle.details.field.manufactureYear" = "Manufacture Year";
+"vehicle.details.field.engineModel" = "Engine Model";
+"vehicle.details.field.lastInspectionDate" = "Last Inspection Date";
+"vehicle.details.field.inspectionValidity" = "Inspection Validity";
+"vehicle.details.field.ownershipType" = "Ownership Type";
+"vehicle.details.field.chassisNumber" = "Chassis Number";
+"vehicle.details.field.colorCode" = "Color Code";
+"vehicle.details.field.color" = "Color";
+"vehicle.details.field.frontTires" = "Front Tires";
+"vehicle.details.field.rearTires" = "Rear Tires";
+"vehicle.details.field.fuelType" = "Fuel Type";
+"vehicle.details.field.registrationDirective" = "Registration Directive";
+"vehicle.details.field.roadEntryDate" = "Road Entry Date";
+"vehicle.details.field.tradeName" = "Trade Name";
+
+"public.vehicle.field.licenseNumber" = "License Number";
+"public.vehicle.field.vehicleTypeName" = "Vehicle Type";
+"public.vehicle.field.manufactureYear" = "Manufacture Year";
+"public.vehicle.field.totalWeight" = "Total Weight";
+"public.vehicle.field.manufacturerName" = "Manufacturer";
+"public.vehicle.field.color" = "Color";
+"public.vehicle.field.modelName" = "Model";
+"public.vehicle.field.tradeName" = "Trade Name";
+"public.vehicle.field.vehicleTypeEUName" = "Vehicle Type (EU)";
+"public.vehicle.field.cancellationName" = "Cancellation Status";
+"public.vehicle.field.cancellationDate" = "Cancellation Date";
+"public.vehicle.field.validityDate" = "License Validity";
+"public.vehicle.field.seatsCount" = "Seats Count";
+"public.vehicle.field.seatsNextToDriver" = "Seats Next To Driver";
+
+"disable.parking.permit.field.carNumber" = "License Number";
+"disable.parking.permit.field.badgeCreationDate" = "Permiy Production Date";
+"disable.parking.permit.field.badgeType" = "Permit Type";
+"disable.parking.permit.field.noBadge" = "No Badge";
+"disable.parking.permit.field.yesBadge" = "Badge Exists";
+"disable.parking.permit.field.badgeTitle" = "Parking Permit Badge";

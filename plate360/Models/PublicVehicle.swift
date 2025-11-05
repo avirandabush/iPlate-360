@@ -61,62 +61,21 @@ struct PublicVehicle: Codable {
         case seatsCount = "mispar_mekomot"
         case seatsNextToDriver = "mispar_mekomot_leyd_nahag"
     }
-}
-
-extension PublicVehicle {
+    
     enum Field: String, CaseIterable {
-        case carNumber
-        case vehicleTypeName
-        case manufactureYear
-        case totalWeight
-        case manufacturerName
-        case color
-        case modelName
-        case tradeName
-        case vehicleTypeEUName
-        case cancellationName
-        case cancellationDate
-        case validityDate
-        case seatsCount
-        case seatsNextToDriver
-
-        var hebrewTitle: String {
-            switch self {
-            case .carNumber: return "מספר רכב"
-            case .vehicleTypeName: return "סוג רכב"
-            case .manufactureYear: return "שנת ייצור"
-            case .totalWeight: return "משקל כולל"
-            case .manufacturerName: return "יצרן"
-            case .color: return "צבע"
-            case .modelName: return "דגם"
-            case .tradeName: return "כינוי מסחרי"
-            case .vehicleTypeEUName: return "סוג רכב (EU)"
-            case .cancellationName: return "סטטוס ביטול"
-            case .cancellationDate: return "תאריך ביטול"
-            case .validityDate: return "תוקף רישוי"
-            case .seatsCount: return "מספר מקומות"
-            case .seatsNextToDriver: return "מקומות ליד לנהג"
-            }
-        }
-
-        var englishTitle: String {
-            switch self {
-            case .carNumber: return "License Number"
-            case .vehicleTypeName: return "Vehicle Type"
-            case .manufactureYear: return "Manufacture Year"
-            case .totalWeight: return "Total Weight"
-            case .manufacturerName: return "Manufacturer"
-            case .color: return "Color"
-            case .modelName: return "Model"
-            case .tradeName: return "Trade Name"
-            case .vehicleTypeEUName: return "Vehicle Type (EU)"
-            case .cancellationName: return "Cancellation Status"
-            case .cancellationDate: return "Cancellation Date"
-            case .validityDate: return "License Validity"
-            case .seatsCount: return "Seats Count"
-            case .seatsNextToDriver: return "Seats Next To Driver"
-            }
-        }
+        case carNumber = "public.vehicle.field.carNumber"
+        case vehicleTypeName = "public.vehicle.field.vehicleTypeName"
+        case manufactureYear = "public.vehicle.field.manufactureYear"
+        case totalWeight = "public.vehicle.field.totalWeight"
+        case manufacturerName = "public.vehicle.field.manufacturerName"
+        case color = "public.vehicle.field.color"
+        case modelName = "public.vehicle.field.modelName"
+        case tradeName = "public.vehicle.field.tradeName"
+        case vehicleTypeEUName = "public.vehicle.field.vehicleTypeEUName"
+        case cancellationName = "public.vehicle.field.cancellationName"
+        case cancellationDate = "public.vehicle.field.cancellationDate"
+        case validityDate = "public.vehicle.field.validityDate"
+        case seatsCount = "public.vehicle.field.seatsCount"
+        case seatsNextToDriver = "public.vehicle.field.seatsNextToDriver"
     }
 }
-

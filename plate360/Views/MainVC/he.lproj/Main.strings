@@ -1,0 +1,15 @@
+
+/* Class = "UILabel"; text = "Get all car details by typing plate number."; ObjectID = "AXb-sl-EK2"; */
+"AXb-sl-EK2.text" = "Get all car details by typing plate number.";
+
+/* Class = "UITextField"; placeholder = "Enter car number"; ObjectID = "Z0z-hd-Yhm"; */
+"Z0z-hd-Yhm.placeholder" = "Enter car number";
+
+/* Class = "UIButton"; configuration.title = "SEARCH"; ObjectID = "mht-es-cbd"; */
+"mht-es-cbd.configuration.title" = "SEARCH";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "mht-es-cbd"; */
+"mht-es-cbd.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Plate360"; ObjectID = "wv6-Zn-W66"; */
+"wv6-Zn-W66.text" = "Plate360";

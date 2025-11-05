@@ -14,40 +14,38 @@ enum ResultsTabs: String, CaseIterable {
     case miscellaneous
     
     var title: String {
-        let isHebrew = LanguageManager.shared.isHebrew
-        
         switch self {
         case .technical:
-            return isHebrew ? "טכני" : "Technical"
+            return "results.tabs.title.technical".localized
         case .licensing:
-            return isHebrew ? "רישוי" : "Licensing"
+            return "results.tabs.title.licensing".localized
         case .safety:
-            return isHebrew ? "בטיחות" : "Safety"
+            return "results.tabs.title.safety".localized
         case .miscellaneous:
-            return isHebrew ? "שונות" : "Miscellaneous"
+            return "results.tabs.title.miscellaneous".localized
         }
     }
     
     var noData: String {
-        let isHebrew = LanguageManager.shared.isHebrew
-        
         switch self {
         case .technical:
-            return isHebrew ? "אין נתונים טכניים" : "No technical information"
+            return "results.tabs.noData.technical".localized
         case .licensing:
-            return isHebrew ? "אין נתוני רישוי" : "No licensing information"
+            return "results.tabs.noData.licensing".localized
         case .safety:
-            return isHebrew ? "אין נתוני בטיחות" : "No safety information"
+            return "results.tabs.noData.safety".localized
         case .miscellaneous:
-            return isHebrew ? "אין מידע נוסף" : "No additional information"
+            return "results.tabs.noData.miscellaneous".localized
         }
     }
 }
 
 class MainVC: UIViewController {
 
+    @IBOutlet weak var appTitle: UILabel!
     @IBOutlet weak var searchField: UITextField!
     @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var appDescription: UILabel!
     @IBOutlet weak var tabsView: UIView!
     @IBOutlet weak var resultsView: UIView!
     
@@ -60,13 +58,20 @@ class MainVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Plate360"
-        
+        setTexts()
         loadData()
         setSearchField()
         setTabCollection()
         setResultsTable()
         setEmptyView()
+    }
+    
+    private func setTexts() {
+        title = "main.screen.title".localized
+        appTitle.text = "main.screen.title".localized
+        searchField.placeholder = "main.search.placeholder".localized
+        searchButton.setTitle("main.screen.search.button.title".localized, for: .normal)
+        appDescription.text = "main.screen.description".localized
     }
     
     private func loadData() {

@@ -1,0 +1,75 @@
+
+"results.tabs.title.technical" = "טכני";
+"results.tabs.title.licensing" = "רישוי";
+"results.tabs.title.safety" = "בטיחות";
+"results.tabs.title.miscellaneous" = "שונות";
+
+"results.tabs.no.data.technical" = "אין מידע טכני";
+"results.tabs.no.data.licensing" = "אין נתוני רישוי";
+"results.tabs.no.data.safety" = "אין נתוני בטיחות";
+"results.tabs.no.data.miscellaneous" = "אין נתונים נוספים";
+
+"main.screen.title" = "Plate360";
+"main.search.placeholder" = "הכנס מספר רכב";
+"main.screen.search.button.title" = "חיפוש";
+"main.screen.description" = "להצגת פרטי רכב, הקלד מספר לוחית רישוי.";
+
+"empty.view.message.default" = "חפש מספר רכב!";
+
+"tab.builder.makeItem.noData" = "אין נתונים.";
+
+"vehicle.history.field.licenseNumber" = "מספר רכב";
+"vehicle.history.field.engineNumber" = "מספר מנוע";
+"vehicle.history.field.lastMileage" = "קילומטראז׳ אחרון";
+"vehicle.history.field.structureChangeFlag" = "שינוי מבנה";
+"vehicle.history.field.lpgInspectionFlag" = "מערכת גפ״ם";
+"vehicle.history.field.colorChangeFlag" = "שינוי צבע";
+"vehicle.history.field.tireChangeFlag" = "שינוי צמיגים";
+"vehicle.history.field.firstRegistrationDate" = "רישום ראשוני";
+"vehicle.history.field.originalityName" = "בעלות מקורית";
+
+"vehicle.details.field.carNumber" = "מספר רכב";
+"vehicle.details.field.manufacturerCode" = "קוד יצרן";
+"vehicle.details.field.manufacturerName" = "יצרן";
+"vehicle.details.field.modelType" = "סוג דגם";
+"vehicle.details.field.modelCode" = "קוד דגם";
+"vehicle.details.field.modelName" = "שם דגם";
+"vehicle.details.field.trimLevel" = "רמת גימור";
+"vehicle.details.field.safetyLevel" = "רמת אבזור בטיחותי";
+"vehicle.details.field.emissionGroup" = "קבוצת זיהום";
+"vehicle.details.field.manufactureYear" = "שנת ייצור";
+"vehicle.details.field.engineModel" = "דגם מנוע";
+"vehicle.details.field.lastInspectionDate" = "מבחן אחרון";
+"vehicle.details.field.inspectionValidity" = "תוקף מבחן";
+"vehicle.details.field.ownershipType" = "סוג בעלות";
+"vehicle.details.field.chassisNumber" = "מספר שלדה";
+"vehicle.details.field.colorCode" = "קוד צבע";
+"vehicle.details.field.color" = "צבע";
+"vehicle.details.field.frontTires" = "צמיג קידמי";
+"vehicle.details.field.rearTires" = "צמיג אחורי";
+"vehicle.details.field.fuelType" = "דלק";
+"vehicle.details.field.registrationDirective" = "הוראת רישום";
+"vehicle.details.field.roadEntryDate" = "מועד עלייה לכביש";
+"vehicle.details.field.tradeName" = "כינוי מסחרי";
+
+"public.vehicle.field.licenseNumber" = "מספר רכב";
+"public.vehicle.field.vehicleTypeName" = "סוג רכב";
+"public.vehicle.field.manufactureYear" = "שנת ייצור";
+"public.vehicle.field.totalWeight" = "משקל כולל";
+"public.vehicle.field.manufacturerName" = "יצרן";
+"public.vehicle.field.color" = "צבע";
+"public.vehicle.field.modelName" = "דגם";
+"public.vehicle.field.tradeName" = "כינוי מסחרי";
+"public.vehicle.field.vehicleTypeEUName" = "סוג רכב (EU)";
+"public.vehicle.field.cancellationName" = "סטטוס ביטול";
+"public.vehicle.field.cancellationDate" = "תאריך ביטול";
+"public.vehicle.field.validityDate" = "תוקף רישוי";
+"public.vehicle.field.seatsCount" = "מספר מקומות";
+"public.vehicle.field.seatsNextToDriver" = "מקומות ליד הנהג";
+
+"disable.parking.permit.field.carNumber" = "מספר רכב";
+"disable.parking.permit.field.badgeCreationDate" = "תאריך הפקת תו";
+"disable.parking.permit.field.badgeType" = "סוג תו";
+"disable.parking.permit.field.noBadge" = "אין תו";
+"disable.parking.permit.field.yesBadge" = "יש תו";
+"disable.parking.permit.field.badgeTitle" = "תו נכה";

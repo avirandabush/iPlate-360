@@ -24,7 +24,7 @@ class EmptyView: UIView {
         label.font = .systemFont(ofSize: 22, weight: .medium)
         label.textAlignment = .center
         label.numberOfLines = 0
-        label.text = "Search a Plate Number!"
+        label.text = "empty.view.message.default".localized
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
