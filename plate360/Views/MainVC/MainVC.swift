@@ -175,10 +175,12 @@ class MainVC: UIViewController {
 
     @IBAction func onTapSearch(_ sender: UIButton) {
         guard let searchText = searchField.text else { return }
-        tabsView.isHidden = false
-        currentTab = .technical
-        
         loaderView.startLoading()
+        
+        currentTab = .technical
+        tabsCollection.resetSelection()
+        
+        tabsView.isHidden = false
         emptyView.isHidden = true
         resultsTable.isHidden = true
         

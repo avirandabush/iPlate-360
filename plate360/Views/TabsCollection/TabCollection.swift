@@ -56,6 +56,11 @@ class TabsCollection: UIView {
         self.items = items
         collectionView.reloadData()
     }
+    
+    func resetSelection() {
+        selectedIndex = 0
+        collectionView.reloadData()
+    }
 }
 
 extension TabsCollection: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
