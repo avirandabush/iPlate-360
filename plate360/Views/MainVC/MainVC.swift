@@ -53,6 +53,7 @@ class MainVC: UIViewController {
     private var tabsCollection: TabsCollection!
     private var resultsTable: ResultsTable!
     private var emptyView: EmptyView!
+    private var loaderView: LoaderView!
     private var currentTab: ResultsTabs = .technical
     
     override func viewDidLoad() {
@@ -64,6 +65,7 @@ class MainVC: UIViewController {
         setTabCollection()
         setResultsTable()
         setEmptyView()
+        setLoaderView()
     }
     
     private func setTexts() {
@@ -87,6 +89,8 @@ class MainVC: UIViewController {
     }
     
     private func updateContent() {
+        loaderView.stopLoading()
+        
         let items = viewModel.displayItems(for: currentTab)
         
         if items.isEmpty {
@@ -153,11 +157,31 @@ class MainVC: UIViewController {
             emptyView.bottomAnchor.constraint(equalTo: resultsView.bottomAnchor)
         ])
     }
+    
+    private func setLoaderView() {
+        loaderView = LoaderView()
+        loaderView.translatesAutoresizingMaskIntoConstraints = false
+        resultsView.addSubview(loaderView)
+        
+        NSLayoutConstraint.activate([
+            loaderView.topAnchor.constraint(equalTo: resultsView.topAnchor),
+            loaderView.leadingAnchor.constraint(equalTo: resultsView.leadingAnchor),
+            loaderView.trailingAnchor.constraint(equalTo: resultsView.trailingAnchor),
+            loaderView.bottomAnchor.constraint(equalTo: resultsView.bottomAnchor)
+        ])
+        
+        loaderView.isHidden = true
+    }
 
     @IBAction func onTapSearch(_ sender: UIButton) {
         guard let searchText = searchField.text else { return }
         tabsView.isHidden = false
         currentTab = .technical
+        
+        loaderView.startLoading()
+        emptyView.isHidden = true
+        resultsTable.isHidden = true
+        
         viewModel.searchVehicle(by: searchText)
         view.endEditing(true)
     }
