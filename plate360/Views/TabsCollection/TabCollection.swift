@@ -81,6 +81,9 @@ extension TabsCollection: UICollectionViewDataSource, UICollectionViewDelegateFl
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectedIndex = indexPath.row
         onTabSelected?(selectedIndex)
+        
+        collectionView.selectItem(at: indexPath, animated: true, scrollPosition: [])
+        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         collectionView.reloadData()
     }
 }
