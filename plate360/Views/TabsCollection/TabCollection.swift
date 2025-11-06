@@ -59,6 +59,7 @@ class TabsCollection: UIView {
     
     func resetSelection() {
         selectedIndex = 0
+        collectionView.scrollToItem(at: IndexPath(item: 0, section: 0), at: .centeredHorizontally, animated: false)
         collectionView.reloadData()
     }
 }
