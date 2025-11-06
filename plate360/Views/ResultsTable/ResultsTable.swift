@@ -44,6 +44,12 @@ class ResultsTable: UIView {
     
     func configure(with items: [DisplayItem]) {
         self.items = items
+        
+        if !items.isEmpty {
+            let topOffset = CGPoint(x: 0, y: 0)
+            tableView.setContentOffset(topOffset, animated: false)
+        }
+        
         tableView.reloadData()
     }
 }
