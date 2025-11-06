@@ -21,7 +21,7 @@ class TabsCollection: UIView {
         layout.minimumInteritemSpacing = 1
         
         let view = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        view.semanticContentAttribute = LanguageManager.shared.isHebrew ? .forceRightToLeft : .forceLeftToRight
+        view.semanticContentAttribute = DirectionManager.shared.isRTL ? .forceRightToLeft : .forceLeftToRight
         view.register(UINib(nibName: "TabCell", bundle: nil), forCellWithReuseIdentifier: "TabCell")
         view.backgroundColor = .clear
         view.showsHorizontalScrollIndicator = false

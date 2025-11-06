@@ -16,17 +16,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceRightToLeft" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Au2-sj-RBv">
+                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Au2-sj-RBv">
                         <rect key="frame" x="12" y="0.0" width="296" height="49"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1e-Se-vjd">
-                                <rect key="frame" x="270.33333333333331" y="15.333333333333334" width="25.666666666666686" height="18.333333333333329"/>
+                                <rect key="frame" x="0.0" y="15.333333333333334" width="25.666666666666668" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRY-0t-AZM">
-                                <rect key="frame" x="0.0" y="15.333333333333334" width="36" height="18.333333333333329"/>
+                                <rect key="frame" x="260" y="15.333333333333334" width="36" height="18.333333333333329"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -54,6 +54,7 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <connections>
+                <outlet property="resultsView" destination="Au2-sj-RBv" id="dR7-zi-u5d"/>
                 <outlet property="titleLabel" destination="d1e-Se-vjd" id="C0Y-AR-yHG"/>
                 <outlet property="valueLabel" destination="QRY-0t-AZM" id="Bcj-qC-xD5"/>
             </connections>

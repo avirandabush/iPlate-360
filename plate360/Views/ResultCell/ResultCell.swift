@@ -9,11 +9,13 @@ import UIKit
 
 class ResultCell: UITableViewCell {
 
+    @IBOutlet weak var resultsView: UIStackView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var valueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        resultsView.semanticContentAttribute = DirectionManager.shared.isRTL ? .forceRightToLeft : .forceLeftToRight
     }
     
     func configure(item: DisplayItem) {
