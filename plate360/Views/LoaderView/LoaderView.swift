@@ -8,15 +8,14 @@
 import UIKit
 
 class LoaderView: UIView {
-    
-    private lazy var activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .large)
-        indicator.color = .yellow
-        indicator.hidesWhenStopped = true
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        return indicator
+
+    private lazy var rotatingImageView: UIImageView = {
+        let imageView = UIImageView(image: UIImage(named: "logo-circle"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
     }()
-    
+
     private lazy var messageLabel: UILabel = {
         let label = UILabel()
         label.textColor = .white
@@ -27,40 +26,50 @@ class LoaderView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
-    
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setup()
     }
-    
+
     private func setup() {
         backgroundColor = .clear
-        addSubview(activityIndicator)
+        addSubview(rotatingImageView)
         addSubview(messageLabel)
         
         NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -20),
+            rotatingImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            rotatingImageView.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -20),
+            rotatingImageView.widthAnchor.constraint(equalToConstant: 80),
+            rotatingImageView.heightAnchor.constraint(equalToConstant: 80),
             
-            messageLabel.topAnchor.constraint(equalTo: activityIndicator.bottomAnchor, constant: 16),
-            messageLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            messageLabel.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
-            messageLabel.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -16)
+            messageLabel.topAnchor.constraint(equalTo: rotatingImageView.bottomAnchor, constant: 16),
+            messageLabel.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
     }
-    
+
     func startLoading() {
-        activityIndicator.startAnimating()
         isHidden = false
+        rotate()
     }
-    
+
     func stopLoading() {
-        activityIndicator.stopAnimating()
         isHidden = true
+        rotatingImageView.layer.removeAllAnimations()
+    }
+
+    private func rotate() {
+        let rotation = CABasicAnimation(keyPath: "transform.rotation")
+        rotation.fromValue = 0
+        rotation.toValue = CGFloat.pi * 2
+        rotation.duration = 1.2
+        rotation.repeatCount = .infinity
+        rotatingImageView.layer.add(rotation, forKey: "rotationAnimation")
     }
 }
+
