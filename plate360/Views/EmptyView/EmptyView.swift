@@ -47,8 +47,8 @@ class EmptyView: UIView {
         NSLayoutConstraint.activate([
             logoWatermarkImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
             logoWatermarkImageView.centerYAnchor.constraint(equalTo: centerYAnchor),
-            logoWatermarkImageView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 16),
-            logoWatermarkImageView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -16),
+            logoWatermarkImageView.leadingAnchor.constraint(greaterThanOrEqualTo: leadingAnchor, constant: 50),
+            logoWatermarkImageView.trailingAnchor.constraint(lessThanOrEqualTo: trailingAnchor, constant: -50),
             
             messageLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
             messageLabel.centerYAnchor.constraint(equalTo: centerYAnchor),
