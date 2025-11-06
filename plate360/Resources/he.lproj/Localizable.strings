@@ -4,10 +4,10 @@
 "results.tabs.title.safety" = "בטיחות";
 "results.tabs.title.miscellaneous" = "שונות";
 
-"results.tabs.no.data.technical" = "אין מידע טכני";
-"results.tabs.no.data.licensing" = "אין נתוני רישוי";
-"results.tabs.no.data.safety" = "אין נתוני בטיחות";
-"results.tabs.no.data.miscellaneous" = "אין נתונים נוספים";
+"results.tabs.noData.technical" = "אין מידע טכני";
+"results.tabs.noData.licensing" = "אין נתוני רישוי";
+"results.tabs.noData.safety" = "אין נתוני בטיחות";
+"results.tabs.noData.miscellaneous" = "אין נתונים נוספים";
 
 "main.screen.title" = "Plate360";
 "main.search.placeholder" = "הכנס מספר רכב";
@@ -15,6 +15,8 @@
 "main.screen.description" = "להצגת פרטי רכב, הקלד מספר לוחית רישוי.";
 
 "empty.view.message.default" = "חפש מספר רכב!";
+
+"loader.message" = "טוען נתונים...";
 
 "tab.builder.makeItem.noData" = "אין נתונים.";
 

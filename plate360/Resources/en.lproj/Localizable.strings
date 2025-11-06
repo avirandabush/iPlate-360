@@ -16,6 +16,8 @@
 
 "empty.view.message.default" = "Search a Plate Number!";
 
+"loader.message" = "Fetching data from server...";
+
 "tab.builder.makeItem.noData" = "No Data.";
 
 "vehicle.history.field.licenseNumber" = "License Number";
