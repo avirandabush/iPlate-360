@@ -55,6 +55,7 @@ class MainVC: UIViewController {
     private var emptyView: EmptyView!
     private var loaderView: LoaderView!
     private var currentTab: ResultsTabs = .technical
+    private var lastSearchedPlateNumber: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -177,12 +178,14 @@ class MainVC: UIViewController {
         guard let searchText = searchField.text else { return }
         loaderView.startLoading()
         
+        lastSearchedPlateNumber = searchText
         currentTab = .technical
         tabsCollection.resetSelection()
         
         tabsView.isHidden = false
         emptyView.isHidden = true
         resultsTable.isHidden = true
+        searchButton.isEnabled = false
         
         viewModel.searchVehicle(by: searchText)
         view.endEditing(true)
@@ -190,7 +193,11 @@ class MainVC: UIViewController {
     
     @objc func textFieldDidChange(_ textField: UITextField) {
         guard let searchText = textField.text else { return }
-        searchButton.isEnabled = !searchText.isEmpty && searchText.count >= 6
+        
+        let correctNumberOfDigits = !searchText.isEmpty && searchText.count >= 6
+        let hasPlateNumberChanged = searchText != lastSearchedPlateNumber
+        
+        searchButton.isEnabled = correctNumberOfDigits && hasPlateNumberChanged
     }
 }
 
