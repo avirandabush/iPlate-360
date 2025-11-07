@@ -14,7 +14,7 @@
 		9878B6812EB6389D0036BDC1 /* Exceptions for "plate360" folder in "plate360" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 9878B5CA2EB200770036BDC1 /* plate360 */;
 		};
