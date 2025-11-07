@@ -50,11 +50,11 @@ class MainVC: UIViewController {
     @IBOutlet weak var tabsView: UIView!
     @IBOutlet weak var resultsView: UIView!
     
-    private let viewModel = SearchViewModel()
+    internal var loaderView: LoaderView!
     private var tabsCollection: TabsCollection!
     private var resultsTable: ResultsTable!
     private var emptyView: EmptyView!
-    private var loaderView: LoaderView!
+    private let viewModel = SearchViewModel()
     private var currentTab: ResultsTabs = .technical
     private var lastSearchedPlateNumber: String?
     
@@ -190,6 +190,10 @@ class MainVC: UIViewController {
         
         viewModel.searchVehicle(by: searchText)
         view.endEditing(true)
+    }
+    
+    @IBAction func onTapCamera(_ sender: Any) {
+        presentImageSourceActionSheet()
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
