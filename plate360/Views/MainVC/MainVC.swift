@@ -44,6 +44,7 @@ class MainVC: UIViewController {
 
     @IBOutlet weak var appTitle: UILabel!
     @IBOutlet weak var searchField: UITextField!
+    @IBOutlet weak var cameraButton: UIButton!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var appDescription: UILabel!
     @IBOutlet weak var tabsView: UIView!

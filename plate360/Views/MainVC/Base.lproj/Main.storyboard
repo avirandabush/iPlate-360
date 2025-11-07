@@ -44,6 +44,20 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AKg-of-lmq">
+                                        <rect key="frame" x="28.666666666666671" y="77.666666666666657" width="56" height="35"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="B9f-nT-ayi"/>
+                                            <constraint firstAttribute="height" constant="35" id="ThM-yB-Fea"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system">
+                                            <color key="baseForegroundColor" red="1" green="0.79607843140000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="onTapCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dtt-mr-Hcc"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mht-es-cbd">
                                         <rect key="frame" x="96.666666666666686" y="130" width="200" height="50"/>
                                         <color key="backgroundColor" red="1" green="0.79607843140000001" blue="0.031372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -97,6 +111,8 @@
                                     <constraint firstItem="wv6-Zn-W66" firstAttribute="centerX" secondItem="9UX-vq-E1G" secondAttribute="centerX" id="eyN-pe-Way"/>
                                     <constraint firstItem="mht-es-cbd" firstAttribute="top" secondItem="Z0z-hd-Yhm" secondAttribute="bottom" constant="10" id="jxY-yp-aOZ"/>
                                     <constraint firstItem="aSD-sN-hj3" firstAttribute="leading" secondItem="9UX-vq-E1G" secondAttribute="leading" constant="30" id="ozO-PP-rV4"/>
+                                    <constraint firstItem="AKg-of-lmq" firstAttribute="centerY" secondItem="Z0z-hd-Yhm" secondAttribute="centerY" id="tya-Uk-pfX"/>
+                                    <constraint firstItem="Z0z-hd-Yhm" firstAttribute="leading" secondItem="AKg-of-lmq" secondAttribute="trailing" constant="12" id="w7n-Mj-d3G"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VKD-Qo-mQ5" userLabel="ResultsSectionView">
@@ -141,6 +157,7 @@
                     <connections>
                         <outlet property="appDescription" destination="AXb-sl-EK2" id="nBv-UV-U3i"/>
                         <outlet property="appTitle" destination="wv6-Zn-W66" id="37w-xY-zr9"/>
+                        <outlet property="cameraButton" destination="AKg-of-lmq" id="CoC-r5-2WF"/>
                         <outlet property="resultsView" destination="xc9-Bc-nAj" id="cUa-88-LCP"/>
                         <outlet property="searchButton" destination="mht-es-cbd" id="zVh-ir-Oar"/>
                         <outlet property="searchField" destination="Z0z-hd-Yhm" id="hm1-LU-BIi"/>
@@ -152,4 +169,7 @@
             <point key="canvasLocation" x="138" y="5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+    </resources>
 </document>
