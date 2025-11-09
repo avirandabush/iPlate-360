@@ -11,10 +11,10 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9878B6812EB6389D0036BDC1 /* Exceptions for "plate360" folder in "plate360" target */ = {
+		98ACCCAE2EC08C5500A1DF3C /* Exceptions for "plate360" folder in "plate360" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				App/Info.plist,
 			);
 			target = 9878B5CA2EB200770036BDC1 /* plate360 */;
 		};
@@ -24,7 +24,7 @@
 		9878B5CD2EB200770036BDC1 /* plate360 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9878B6812EB6389D0036BDC1 /* Exceptions for "plate360" folder in "plate360" target */,
+				98ACCCAE2EC08C5500A1DF3C /* Exceptions for "plate360" folder in "plate360" target */,
 			);
 			path = plate360;
 			sourceTree = "<group>";
@@ -148,7 +148,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FR84GTZ5WF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = plate360/Info.plist;
+				INFOPLIST_FILE = plate360/App/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we.need.access.to.your.camera.to shoot.a.plate.number";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = we.need.access.to.your.photos.to.search.plate.number;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -177,7 +179,9 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = FR84GTZ5WF;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = plate360/Info.plist;
+				INFOPLIST_FILE = plate360/App/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "we.need.access.to.your.camera.to shoot.a.plate.number";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = we.need.access.to.your.photos.to.search.plate.number;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
