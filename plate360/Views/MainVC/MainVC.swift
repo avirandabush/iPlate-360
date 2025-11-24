@@ -207,4 +207,10 @@ extension MainVC: UITextFieldDelegate {
         let proposedText = (currentText as NSString).replacingCharacters(in: range, with: string)
         return proposedText.count <= 8
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+        lastSearchedPlateNumber = nil
+        searchButton.isEnabled = false
+    }
 }
